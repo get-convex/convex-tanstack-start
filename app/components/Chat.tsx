@@ -91,17 +91,25 @@ export default function Component({
   const code = codeToShow && <CodeSample code={codeToShow} />
 
   const input = (
-    <div className="flex w-full items-center space-x-2 pt-6">
-      <Input
-        type="text"
-        placeholder="Type a message..."
-        value={newMessage}
-        onChange={(e) => setNewMessage(e.target.value)}
-        onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-      />
-      <Button size="icon" onClick={handleSendMessage}>
-        <PaperPlaneIcon className="h-4 w-4" />
-      </Button>
+    <div className="flex w-full flex-col pt-6 gap-y-2">
+      <div className="flex space-x-2 w-full">
+        <Input
+          type="text"
+          placeholder="Type a message..."
+          value={newMessage}
+          onChange={(e) => setNewMessage(e.target.value)}
+          onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+        />
+        <Button size="icon" onClick={handleSendMessage}>
+          <PaperPlaneIcon className="h-4 w-4" />
+        </Button>
+      </div>
+      {newMessage !== '' && (
+        <span className="text-xs text-slate-400">
+          As this is a public demo, your message will be replaced with
+          system-generated text.
+        </span>
+      )}
     </div>
   )
 
