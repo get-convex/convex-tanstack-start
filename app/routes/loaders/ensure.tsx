@@ -39,7 +39,7 @@ function Messages() {
     );
   },
   component: () => {
-    const { data } = useSuspenseQuery(
+    const { data } = useQuery(
       convexQuery(api.messages.list, {})
     );
   },

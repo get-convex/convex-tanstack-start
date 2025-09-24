@@ -25,7 +25,7 @@ function Messages() {
         <CodeSample
           code={`export const Route = createFileRoute('/loaders/no-loader')({
   component: () => {
-    const { data } = useSuspenseQuery(
+    const { data } = useQuery(
       convexQuery(api.messages.list, {})
     );
   },
