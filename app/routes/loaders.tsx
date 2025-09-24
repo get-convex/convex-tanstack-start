@@ -60,7 +60,7 @@ export default function BlockingAndStreaming() {
                 search={{ cacheBust }}
                 onClick={() => setCacheBust(rand())}
               >
-                <code>queryClient.preloadQuery()</code> loads on mouseenter but
+                <code>queryClient.prefetchQuery()</code> loads on mouseenter but
                 doesn't block
               </Link>
             </Button>
