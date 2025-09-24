@@ -43,7 +43,7 @@ export default function BlockingAndStreaming() {
             onto a link in TanStack Start by default.
           </p>
 
-          <nav className="flex flex-col space-y-4 mb-4">
+          <nav className="flex flex-col space-y-4 mb-4 not-prose">
             <Button asChild>
               <Link
                 to="/loaders/ensure"
