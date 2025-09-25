@@ -4,13 +4,7 @@ import Chat from '~/components/Chat'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools/production'
 import { useState } from 'react'
 import { Button } from '../components/ui/button'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '../components/ui/card'
+import { Card, CardContent, CardHeader } from '../components/ui/card'
 
 export const Route = createFileRoute('/gcTime')({
   component: QueryCaching,
@@ -72,19 +66,31 @@ export default function QueryCaching() {
           <CardHeader>
             <div className="flex space-x-4">
               <Button
-                className={channel === 'sf' ? 'bg-slate-400' : ''}
+                className={
+                  channel === 'sf'
+                    ? 'bg-slate-300 hover:bg-slate-300 text-black'
+                    : ''
+                }
                 onClick={() => setChannel('sf')}
               >
                 SF
               </Button>
               <Button
-                className={channel === 'nyc' ? 'bg-slate-400' : ''}
+                className={
+                  channel === 'nyc'
+                    ? 'bg-slate-300 hover:bg-slate-300 text-black'
+                    : ''
+                }
                 onClick={() => setChannel('nyc')}
               >
                 NYC
               </Button>
               <Button
-                className={channel === 'seattle' ? 'bg-slate-400' : ''}
+                className={
+                  channel === 'seattle'
+                    ? 'bg-slate-300 hover:bg-slate-300 text-black'
+                    : ''
+                }
                 onClick={() => setChannel('seattle')}
               >
                 Seattle
