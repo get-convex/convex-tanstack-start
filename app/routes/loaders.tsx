@@ -49,9 +49,12 @@ export default function BlockingAndStreaming() {
                 to="/loaders/ensure"
                 search={{ cacheBust }}
                 onClick={() => setCacheBust(rand())}
+                className="h-auto"
               >
-                <code>await queryClient.ensureQueryData</code> blocks for data
-                and preloads on mouseenter
+                <div className="whitespace-normal text-center">
+                  <code>await queryClient.ensureQueryData</code> blocks for data
+                  and preloads on mouseenter
+                </div>
               </Link>
             </Button>
             <Button asChild>
@@ -59,9 +62,12 @@ export default function BlockingAndStreaming() {
                 to="/loaders/prefetch"
                 search={{ cacheBust }}
                 onClick={() => setCacheBust(rand())}
+                className="h-auto"
               >
-                <code>queryClient.prefetchQuery()</code> loads on mouseenter but
-                doesn't block
+                <div className="whitespace-normal text-center">
+                  <code>queryClient.prefetchQuery()</code> loads on mouseenter
+                  but doesn't block
+                </div>
               </Link>
             </Button>
             <Button asChild>
@@ -69,8 +75,11 @@ export default function BlockingAndStreaming() {
                 to="/loaders/no-loader"
                 search={{ cacheBust }}
                 onClick={() => setCacheBust(rand())}
+                className="h-auto"
               >
-                no loader, so mouseover does nothing
+                <div className="whitespace-normal text-center">
+                  no loader, so mouseover does nothing
+                </div>
               </Link>
             </Button>
           </nav>
