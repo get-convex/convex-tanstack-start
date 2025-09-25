@@ -46,7 +46,7 @@ export default function QueryCaching() {
           <p>
             <Button
               variant="link"
-              className="text-md px-0"
+              className="text-md px-0 underline"
               onClick={() => {
                 const element = document.querySelector(
                   '[aria-label="Open Tanstack query devtools"]',
