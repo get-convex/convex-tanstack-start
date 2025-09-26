@@ -1,14 +1,14 @@
-import { QueryClient } from '@tanstack/react-query'
 import {
-  Link,
-  Outlet,
-  ScrollRestoration,
   createRootRouteWithContext,
+  HeadContent,
+  Scripts,
+  Outlet,
+  Link,
 } from '@tanstack/react-router'
-import { Meta, Scripts } from '@tanstack/start'
 import * as React from 'react'
 import appCss from '../styles/app.css?url'
 import { cn } from '~/lib/utils'
+import { QueryClient } from '@tanstack/react-query'
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   {
@@ -43,11 +43,10 @@ function RootDocument({ children }: { children: React.ReactNode }) {
   return (
     <html>
       <head>
-        <Meta />
+        <HeadContent />
       </head>
       <body>
         <RootLayout>{children}</RootLayout>
-        <ScrollRestoration />
         <Scripts />
       </body>
     </html>

@@ -1,4 +1,4 @@
-import { createRouter as createTanStackRouter } from '@tanstack/react-router'
+import { createRouter } from '@tanstack/react-router'
 import { routeTree } from './routeTree.gen'
 import { ConvexQueryClient } from '@convex-dev/react-query'
 import { QueryClient } from '@tanstack/react-query'
@@ -7,7 +7,7 @@ import { ConvexProvider, ConvexReactClient } from 'convex/react'
 import { DefaultCatchBoundary } from './components/DefaultCatchBoundary'
 import { NotFound } from './components/NotFound'
 
-export function createRouter() {
+export function getRouter() {
   let CONVEX_URL = (import.meta as any).env.VITE_CONVEX_URL!
   // hardcoded, Tom's dev instance
   // this is temporary
@@ -32,11 +32,12 @@ export function createRouter() {
   convexQueryClient.connect(queryClient)
 
   const router = routerWithQueryClient(
-    createTanStackRouter({
+    createRouter({
       routeTree,
       defaultPreload: 'intent',
       defaultErrorComponent: DefaultCatchBoundary,
       defaultNotFoundComponent: () => <NotFound />,
+      scrollRestoration: true,
       context: { queryClient },
       Wrap: ({ children }) => {
         return (
