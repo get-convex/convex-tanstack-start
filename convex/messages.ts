@@ -158,7 +158,6 @@ export const sendMessage = mutation(
     ctx,
     {
       user,
-      body,
       channel = 'chatty',
     }: { user: string; body: string; channel: string },
   ) => {
