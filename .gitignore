@@ -1,5 +1,4 @@
 .vercel
-.vinxi
 app.config.timestamp_*.js
 node_modules
 
