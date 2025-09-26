@@ -20,6 +20,7 @@
     "@radix-ui/react-icons": "~1.3.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@tailwindcss/vite": "^4.1.13",
+    "@tanstack/nitro-v2-vite-plugin": "^1.132.0",
     "@tanstack/react-query": "^5.89.0",
     "@tanstack/react-query-devtools": "^5.89.0",
     "@tanstack/react-router": "^1.132.2",
