@@ -1,6 +1,6 @@
 .vercel
-.vinxi
 app.config.timestamp_*.js
 node_modules
+dist
 
 .env.local
