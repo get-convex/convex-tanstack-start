@@ -1,7 +1,6 @@
 @import 'tailwindcss';
 
 @plugin '@tailwindcss/typography';
-@plugin 'tailwindcss-animate';
 
 @utility container {
   margin-inline: auto;
