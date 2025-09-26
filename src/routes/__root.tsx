@@ -6,7 +6,7 @@ import {
   Link,
 } from '@tanstack/react-router'
 import * as React from 'react'
-import appCss from '../styles/app.css?url'
+import appCss from '~/styles/app.css?url'
 import { cn } from '~/lib/utils'
 import { QueryClient } from '@tanstack/react-query'
 
