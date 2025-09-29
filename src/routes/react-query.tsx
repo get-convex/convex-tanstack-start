@@ -61,7 +61,7 @@ export default function ReactQuery() {
             </Button>{' '}
             to see these updates pushed live.{' '}
           </p>
-          <Chat useSuspense={true} />
+          <Chat useSuspense={false} />
         </div>
         <div>
           <CodeSample
