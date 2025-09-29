@@ -14,6 +14,10 @@ export const Route = createFileRoute('/react-query')({
       ...convexQuery(api.messages.isSimulatingTraffic, {}),
       gcTime: 2000,
     })
+    context.queryClient.prefetchQuery({
+      ...convexQuery(api.messages.listMessages, {}),
+      gcTime: 2000,
+    })
   },
 })
 
@@ -61,7 +65,7 @@ export default function ReactQuery() {
             </Button>{' '}
             to see these updates pushed live.{' '}
           </p>
-          <Chat useSuspense={true} />
+          <Chat useSuspense={false} />
         </div>
         <div>
           <CodeSample
