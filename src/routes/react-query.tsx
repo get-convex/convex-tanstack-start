@@ -97,8 +97,7 @@ const { data } = useQuery({
         <code>useQuery()</code> returns an object with a <code>.data</code>{' '}
         property along with other metadata. The hook accepts a single object,
         which you'll mostly populate with the return value of the{' '}
-        <code>convexQuery()</code>
-        hook.
+        <code>convexQuery()</code> hook.
       </p>
       <p>
         The same React Query hooks can be used for fetch endpoints and Convex
