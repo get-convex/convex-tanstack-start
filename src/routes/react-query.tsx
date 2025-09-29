@@ -14,6 +14,10 @@ export const Route = createFileRoute('/react-query')({
       ...convexQuery(api.messages.isSimulatingTraffic, {}),
       gcTime: 2000,
     })
+    context.queryClient.prefetchQuery({
+      ...convexQuery(api.messages.listMessages, {}),
+      gcTime: 2000,
+    })
   },
 })
 
