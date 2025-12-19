@@ -93,7 +93,7 @@ export default function LandingPage() {
           <p className="text-sm font-bold mb-2">Or run:</p>
           <p className="text-lg font-light">
             <code className="bg-slate-700 block px-4 py-2 rounded-md border border-slate-600">
-              npx create-convex@latest  -t tanstack-start
+              npx create-convex@latest -t tanstack-start
             </code>
           </p>
         </div>
